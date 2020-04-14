@@ -5,6 +5,7 @@ import java.util.TreeSet;
 
 /**
  * Provided a grid of characters, find all valid words connected by any direction.
+ * Currently the valid words are a limited hard coded list.
  *
  * Prerequisite: JDK 1.8
  *
@@ -24,8 +25,8 @@ import java.util.TreeSet;
  */
 public class Main {
     static Dictionary dictionary = new Dictionary();
-    static String[] words = {"a", "ab", "about", "absolute", "arm", "be", "beat", "bear", "beam", "blue", "but",
-            "mat", "met", "meat", "out", "rat", "rear", "so", "sol", "tar", "tea", "teal", "tear", "team", "term"};
+    static String[] words = {"a", "ab", "about", "absolute", "arm", "be", "beat", "bear", "beam", "blue", "bob", "boba", "but",
+            "mama", "mat", "met", "meat", "out", "ram", "rat", "rear", "so", "sol", "tar", "tea", "teal", "tear", "team", "term", "tube"};
 
     public static void main(String[] argc) {
         for (String word : words) {
@@ -49,8 +50,6 @@ public class Main {
                 }
             }
         }
-
-
 
         // Should have been a Set instead of ArrayList to not have duplicate elements
         // Unless we want duplicate words derived from different path?
@@ -165,5 +164,4 @@ public class Main {
             return children.get(c);
         }
     }
-
 }
